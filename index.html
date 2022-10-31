@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+  <meta name="description" content="Stephen's Biography">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Stephen Bernard">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Biography</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let attempt = 3;
+         
+         function trial() {
+        
+        let uname = document.getElementById("user").value;
+        let word = document.getElementById("pass").value;
+        if (uname == "Stephen" && word == 1234) {
+            alert ("Welcome" + " " + uname + " " + "Bernard");
+            window.location = "https://www.google.com"
+            return false;
+        } 
+        else {
+            attempt--;
+            alert("you have"+ " " + attempt + " attempts lefts");
+
+            if (attempt == 0) {
+                document.getElementById("user").disabled = true;
+                document.getElementById("pass").disabled = true;
+                document.getElementById("butt").disabled = true;
+                document.getElementById("butt").style.backgroundColor="grey";
+                document.getElementById("butt").style.color="rgb(71, 76, 71)";
+                return false;
+            }
+        }
+         }
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <p class="logo">Orien<span>tal</span></p>
+            <ul class="udl">
+                <li><a href="google.com">Home</a></li>
+                <li><a href="fb.com">About</a></li>
+                <li><a href="twitter.com">Contact</a></li>
+                <li><a href="instagram.com">Forum</a></li>
+            </ul>
+            <p class="sub">Settings</p>
+       </nav>
+       <div class="container">
+
+       <h2>Welcome to Oriental Group</h2>
+       <div class="wrapper">
+        <div class="first">
+       <p class="meet">Meet our Founder <a href="fb.com">Here</a></p>
+       <p class="mail">input email to suscribe </p>
+       <input type="text" class="txt">
+       <a href="google.com" class="link">submit</a>
+    </div>
+       <fieldset>
+        <legend>Login</legend>
+        <label for="username" class="userN">Username/Email:</label> <br />
+        <input type="text" class="user" id="user" placeholder="input username/email"> <br />
+        <label for="password" class="pwod">Password:</label> 
+        <input type="password" class="pass" id="pass" placeholder="password"> <br />
+        <div class="div1">   
+            <input type="checkbox" name="check" id="check" value="Remember">
+            <label for="check" class="lab">Remember me</label>
+            <a href="fb.com" class="forgot">forgot password</a>
+        </div>
+       <input type="button" value="Sign in" class="button" onclick="trial()" name="Sign in" id="butt">
+       </fieldset>
+        </div>
+    </div>
+
+    </header>
+
+    <main>
+        <div class="container-2">
+            <img src="./images/black..jpg" alt="" class="moi">
+            <p class="par--2">
+                My name is Stephen Bernard. I was born on 21st May. I'm from Imo state. I graduated from the department of English Language and Literature in Nnamdi Azikiwe University, Awka, Anambra state with a second class honours. I'm an avid lover of tech and currently teaching myself software development. I'm a staunch catholic and a believer. To send a message, click the button below <br>
+           
+            <input type="button" value="Message" class="button-2">
+        </p>
+        </div>
+       
+        </main>
+</body>
+</html>
